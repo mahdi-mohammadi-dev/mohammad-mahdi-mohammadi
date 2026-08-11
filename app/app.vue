@@ -1,6 +1,16 @@
+<script setup lang="ts">
+const { initTheme } = useTheme()
+
+onMounted(() => {
+  initTheme()
+})
+</script>
+
 <template>
-  <div>
+  <div class="min-h-dvh bg-bg text-text">
     <NuxtRouteAnnouncer />
-    <NuxtWelcome />
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
   </div>
 </template>
